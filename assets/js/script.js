@@ -1,7 +1,7 @@
 const letters = document.querySelectorAll('.letter')
 const word1Box = document.getElementById('word-1-box')
 
-const word1 = ["", "", "", "", ""]
+const word1 = []
 const word2 = []
 const word3 = []
 const word4 = []
@@ -13,6 +13,7 @@ letterEntered.textContent = word1[0]
 word1Box.appendChild(letterEntered)
 
 function fillBoxes() {
+    word1Box.innerHTML = ""
     for(let i=0; i<5; i++){
         var letterBox = document.createElement("div")
         var letterEntered = document.createElement("p");
@@ -24,11 +25,12 @@ function fillBoxes() {
 }
 
 function letterPress(letter){
-    if(word1.length < 10){
+    if(word1.length < 5){
         console.log(letter)
-        word1.unshift(letter)
+        word1.push(letter)
         console.log(word1)
     }
+    fillBoxes()
 }
 
 letters.forEach(letter => {
