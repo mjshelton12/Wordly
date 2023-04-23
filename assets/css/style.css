@@ -55,5 +55,21 @@ body {
     border: none;
     cursor: pointer;
     margin: 3px;
+    flex-direction: row;
+}
+
+
+.keys {
+    flex-direction: row;
+}
+
+#delete {
+    padding: 20px;
+    font-size: x-large;
+    background-color: rgb(78, 187, 105);
+    border-radius: 10px 10px 10px 10px;
+    border: none;
+    cursor: pointer;
+    margin: 3px;
 }
 
