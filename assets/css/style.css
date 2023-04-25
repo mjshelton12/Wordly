@@ -44,10 +44,15 @@ body {
 
 .letter-box {
     background-color: rgb(232, 232, 232);
+    color: rgb(116, 122, 151);
     height: 75px;
     width: 75px;
     margin: 5px;
     border-radius: 10px 10px 10px 10px;
+    text-align: center;
+    line-height: 3px;
+    font-size: 40px;
+    font-weight: bold;
 }
 
 .letter {
