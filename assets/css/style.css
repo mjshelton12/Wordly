@@ -21,6 +21,9 @@ body {
 .container {
     display: flex;
     justify-content: center;
+}
+
+.game {
     margin-bottom: 40px;
 }
 
@@ -64,6 +67,16 @@ body {
 }
 
 #delete {
+    padding: 20px;
+    font-size: x-large;
+    background-color: rgb(78, 187, 105);
+    border-radius: 10px 10px 10px 10px;
+    border: none;
+    cursor: pointer;
+    margin: 3px;
+}
+
+#enter {
     padding: 20px;
     font-size: x-large;
     background-color: rgb(78, 187, 105);
