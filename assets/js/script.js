@@ -5,11 +5,14 @@ const word4Box = document.getElementById('word-4-box')
 const word5Box = document.getElementById('word-5-box')
 const word6Box = document.getElementById('word-6-box')
 const deleteButton = document.getElementById('delete')
+const enterButton = document.getElementById('enter')
 const keyRow1 = document.getElementById('keys-row-1')
 const keyRow2 = document.getElementById('keys-row-2')
 const keyRow3 = document.getElementById('keys-row-3')
 
 const wordBoxes = [word1Box, word2Box, word3Box, word4Box, word5Box]
+
+let targetBox = word1Box
 
 const word1 = []
 const word2 = []
@@ -19,14 +22,17 @@ const word5 = []
 const word6 = []
 
 const words = [word1, word2, word3, word4, word5]
+let targetWord = word1
 
 const row1 = "QWERTYUIOP"
 const row2 = "ASDFGHJKL"
 const row3 = "ZXCVBNM"
 
+let i = 0
+
 var letterEntered = document.createElement("p");
-letterEntered.textContent = word1[0]
-word1Box.appendChild(letterEntered)
+letterEntered.textContent = targetWord
+targetBox.appendChild(letterEntered)
 
 function buildLetters() {
     for(let i=0; i<row1.length; i++){
@@ -67,10 +73,8 @@ function fillBoxes() {
 }
 
 function letterPress(letter){
-    if(word1.length < 5){
-        word1.push(letter)
-    } else {
-        word2.push(letter)
+    if(targetWord.length < 5){
+        targetWord.push(letter)
     }
     fillBoxes()
 }
@@ -78,6 +82,15 @@ function letterPress(letter){
 function deleteButtonPress(){
     word1.pop()
     fillBoxes()
+}
+
+function enterButtonPress(){
+    if(targetWord.length === 5){
+        i++
+        targetWord=words[i]
+        targetBox=wordBoxes[i]
+        console.log(targetWord)
+    }
 }
 
 letters.forEach(letter => {
@@ -88,7 +101,10 @@ letters.forEach(letter => {
  
  });
 
- deleteButton.addEventListener("click", event => {
+deleteButton.addEventListener("click", event => {
     deleteButtonPress()})
+
+enterButton.addEventListener("click", event => {
+    enterButtonPress()})
 
  fillBoxes()
