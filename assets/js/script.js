@@ -1,3 +1,4 @@
+// Making elements in the HTML accessable in JS
 const word1Box = document.getElementById('word-1-box')
 const word2Box = document.getElementById('word-2-box')
 const word3Box = document.getElementById('word-3-box')
@@ -10,10 +11,13 @@ const keyRow1 = document.getElementById('keys-row-1')
 const keyRow2 = document.getElementById('keys-row-2')
 const keyRow3 = document.getElementById('keys-row-3')
 
-const wordBoxes = [word1Box, word2Box, word3Box, word4Box, word5Box]
+// Array of each box for words
+const wordBoxes = [word1Box, word2Box, word3Box, word4Box, word5Box, word6Box]
 
+//Establishes current word box
 let targetBox = word1Box
 
+//Create word arrays to fill boxes
 const word1 = []
 const word2 = []
 const word3 = []
@@ -21,19 +25,28 @@ const word4 = []
 const word5 = []
 const word6 = []
 
-const words = [word1, word2, word3, word4, word5]
+
+//Array of each word
+const words = [word1, word2, word3, word4, word5, word6]
+
+//Establishes current word
 let targetWord = word1
 
+//Strings to provide letters for digital keyboard
 const row1 = "QWERTYUIOP"
 const row2 = "ASDFGHJKL"
 const row3 = "ZXCVBNM"
 
+//Counter to allow for switches wordboxes and words
 let i = 0
 
-var letterEntered = document.createElement("p");
-letterEntered.textContent = targetWord
-targetBox.appendChild(letterEntered)
+//Captures which letter user presses and appends it to the appropriate word box
+// var letterEntered = document.createElement("p");
+// letterEntered.textContent = targetWord
+// targetBox.appendChild(letterEntered)
 
+
+//Creates digital keyboard
 function buildLetters() {
     for(let i=0; i<row1.length; i++){
         let key = document.createElement("button")
@@ -58,6 +71,7 @@ function buildLetters() {
 buildLetters()
 const letters = document.querySelectorAll('.letter')
 
+//Fills boxes with letters that user enters
 function fillBoxes() {
     for(let i=0; i<wordBoxes.length; i++){
         wordBoxes[i].innerHTML = ""
@@ -72,6 +86,7 @@ function fillBoxes() {
         }
 }
 
+//Captures letters pressed and adds them to current word up to word length of 5
 function letterPress(letter){
     if(targetWord.length < 5){
         targetWord.push(letter)
@@ -79,12 +94,17 @@ function letterPress(letter){
     fillBoxes()
 }
 
+//Deletes letters from current word
 function deleteButtonPress(){
-    word1.pop()
+    targetWord.pop()
     fillBoxes()
 }
 
+//If current word is long enough, movse onto 
 function enterButtonPress(){
+    if(i===5){
+        window.alert("All done!")
+    }
     if(targetWord.length === 5){
         i++
         targetWord=words[i]
