@@ -10,6 +10,9 @@ Application still under construction, but play if you'd like!
 * HTML - Used to build core elements of app
 * Local Storage - Saves wins so the user can leave and return to the page and save their progress
 
+## Live Site
+
+[Live Application](https://mjshelton12.github.io/Tech_Specs_Tech_Blog/)
 
 ## Overview of Site
 
