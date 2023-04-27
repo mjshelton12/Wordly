@@ -113,6 +113,7 @@ function enterButtonPress(){
     }
 }
 
+//Creates letter button functionality
 letters.forEach(letter => {
 
     letter.addEventListener('click', event => {
@@ -121,10 +122,13 @@ letters.forEach(letter => {
  
  });
 
+ //Creates letter button functionality
 deleteButton.addEventListener("click", event => {
     deleteButtonPress()})
 
+//Creates letter button functionality
 enterButton.addEventListener("click", event => {
     enterButtonPress()})
 
- fillBoxes()
+//Fill word boxes with empty spaces or buttons
+fillBoxes()
