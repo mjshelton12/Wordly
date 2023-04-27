@@ -40,6 +40,9 @@ const row3 = "ZXCVBNM"
 //Counter to allow for switches wordboxes and words
 let i = 0
 
+//Created winning word
+let winningWord = "HONOR"
+
 //Captures which letter user presses and appends it to the appropriate word box
 // var letterEntered = document.createElement("p");
 // letterEntered.textContent = targetWord
@@ -102,14 +105,15 @@ function deleteButtonPress(){
 
 //If current word is long enough, movse onto 
 function enterButtonPress(){
-    if(i===5){
-        window.alert("All done!")
-    }
-    if(targetWord.length === 5){
+    let winCheck = targetWord.join('')
+    if(winCheck == winningWord){
+        window.alert("You win!!!!")
+    } else if(i===5){
+        window.alert("Nice Try!")
+    } else if(targetWord.length === 5){
         i++
         targetWord=words[i]
         targetBox=wordBoxes[i]
-        console.log(targetWord)
     }
 }
 
