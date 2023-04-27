@@ -12,8 +12,6 @@ Application still under construction, but play if you'd like!
 
 ## Live Site
 
-[Live Application](## Live Site
-
 [Live Application](https://mjshelton12.github.io/Wordly/))
 
 ## Overview of Site
