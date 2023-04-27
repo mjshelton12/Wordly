@@ -31,6 +31,9 @@ const words = [word1, word2, word3, word4, word5, word6];
 //Establishes current word
 let targetWord = word1;
 
+//Checked how many times the user has won
+var wins = localStorage.getItem("wins")
+
 //Strings to provide letters for digital keyboard
 const row1 = "QWERTYUIOP";
 const row2 = "ASDFGHJKL";
@@ -105,7 +108,14 @@ function deleteButtonPress() {
 function enterButtonPress() {
   let winCheck = targetWord.join("");
   if (winCheck == winningWord) {
-    window.alert("You win!!!!");
+    wins++
+    localStorage.setItem("wins", wins)
+    window.alert("You win!!!! You've won " + wins + 
+    " times so far!");
+    let playAgain = window.confirm("Play again?");
+    if (playAgain) {
+        location.reload()
+    }
   } else if (i === 5) {
     let playAgain = window.confirm("Nice Try! Play again?");
     if (playAgain) {
@@ -137,3 +147,9 @@ enterButton.addEventListener("click", (event) => {
 
 //Fill word boxes with empty spaces or buttons
 fillBoxes();
+
+
+//To use later
+//var wins = localStorage.getItem("wins")
+//localStorage.setItem("wins", wins)
+//
