@@ -45,11 +45,6 @@ let i = 0;
 //Created winning word
 let winningWord = "HONOR";
 
-//Captures which letter user presses and appends it to the appropriate word box
-// var letterEntered = document.createElement("p");
-// letterEntered.textContent = targetWord
-// targetBox.appendChild(letterEntered)
-
 //Creates digital keyboard
 function buildLetters() {
   for (let i = 0; i < row1.length; i++) {
