@@ -66,12 +66,16 @@ body {
     flex-direction: row;
 }
 
+.letter:active {
+    background-color: rgb(172, 186, 193);
+}
+
 
 .keys {
     flex-direction: row;
 }
 
-#delete {
+#delete, #enter {
     padding: 20px;
     font-size: x-large;
     background-color: rgb(78, 187, 105);
@@ -81,13 +85,6 @@ body {
     margin: 3px;
 }
 
-#enter {
-    padding: 20px;
-    font-size: x-large;
-    background-color: rgb(78, 187, 105);
-    border-radius: 10px 10px 10px 10px;
-    border: none;
-    cursor: pointer;
-    margin: 3px;
+#delete:active, #enter:active {
+    background-color: rgb(69, 166, 93);
 }
-
