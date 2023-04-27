@@ -12,11 +12,11 @@ Application still under construction, but play if you'd like!
 
 ## Live Site
 
-[Live Application](https://mjshelton12.github.io/Wordly/))
+[Live Application](https://mjshelton12.github.io/Wordly/)
 
 ## Overview of Site
 
-![Wordly](https://user-images.githubusercontent.com/106135769/234737931-45c98243-d85b-4f69-8e65-26fb42a3f8d1.png)
+![Wordly](https://user-images.githubusercontent.com/106135769/234770233-13ba2dd3-becb-439b-9e15-d7f99369f041.png)
 
 
 ## Summary
