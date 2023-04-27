@@ -1,6 +1,8 @@
 # Wordly
 It's Wordle except I made it
 
+Application still under construction, but play if you'd like!
+
 ## Technologies Used
 
 * JavaScript - Used to create functionality and append elements based on user needs
@@ -11,7 +13,7 @@ It's Wordle except I made it
 
 ## Overview of Site
 
-![Wordly](https://i.imgur.com/co3ucII.jpeg)
+![Wordly](https://user-images.githubusercontent.com/106135769/234737931-45c98243-d85b-4f69-8e65-26fb42a3f8d1.png)
 
 
 ## Summary
