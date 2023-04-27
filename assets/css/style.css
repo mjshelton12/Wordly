@@ -10,7 +10,12 @@ body {
 }
 
 .headers > * {
-    margin: 5px;
+    margin: 0px;
+}
+
+h1 {
+    font-family: 'Castoro Titling';
+    font-size: 65px;
 }
 
 .headers h3 {
