@@ -37,7 +37,7 @@ var wins = localStorage.getItem("wins")
 //Strings to provide letters for digital keyboard
 const row1 = "QWERTYUIOP";
 const row2 = "ASDFGHJKL";
-const row3 = "ZXCVBNM";
+const row3 = "MNBVCXZ";
 
 //Counter to allow for switches wordboxes and words
 let i = 0;
