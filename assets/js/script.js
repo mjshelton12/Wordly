@@ -142,9 +142,3 @@ enterButton.addEventListener("click", (event) => {
 
 //Fill word boxes with empty spaces or buttons
 fillBoxes();
-
-
-//To use later
-//var wins = localStorage.getItem("wins")
-//localStorage.setItem("wins", wins)
-//
